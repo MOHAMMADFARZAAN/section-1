@@ -16,6 +16,9 @@
         h1,h2,h3,h4,h5,h5{
             margin: 0;
         }
+
+        /*---------------------------HEADER------------------------------*/
+
         header{
             height: 70vh;
             display: flex;
@@ -63,6 +66,8 @@
             background-color: transparent;
             border: 3px solid orange;
         }
+
+        /*-------------------------------MAIN------------------------------------*/
         .card{
             background-color: white;
             border: 1px solid white;
@@ -70,8 +75,10 @@
             height: 300px;
             --fa-beat-fade-opacity: 1;
             --fa-beat-fade-scale: 1;
-            /* border-radius: 15px; */
+            border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            transition-duration: 150ms;
+
         }
         .card *{
             padding: 10px;
@@ -83,7 +90,7 @@
         }
         .card-container{
             display: flex;
-            gap: 45px;
+            gap: 50px;
             flex-direction: row;
             text-align: center;
             /*in display flex flex direction is by default set to row you dont need to right this*/
@@ -91,7 +98,13 @@
         .card:hover{
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
             --fa-beat-fade-opacity: 1;
-            --fa-beat-fade-scale: 1.045;
+            --fa-beat-fade-scale: 1.065;
+        }
+        .card:hover hr{
+            border-bottom: 4px solid orange;
+        }
+        .card hr{
+            transition-duration: 200ms;
         }
         .section-title{
             font-size: 40px;
@@ -107,6 +120,91 @@
         }
         .card p{
             font-size: 20px;
+        }
+        .card hr{
+            border: none;
+            border-bottom: 4px solid white;
+            width: 40%;
+        }
+        /*---------------------------------FOOTER------------------------------*/
+
+        footer{
+            height: 27vh;
+            margin-top: 40px;
+            background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            padding-top: 50px;
+        }
+        .fcard-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .fcard{
+            text-align: left;
+            padding: 20px;
+            width: 20%;
+        }
+        .f-btn{
+            background-color: orange;
+            border: none;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        .f-subbtn{
+            background-color: orange;
+            border: none;
+            color: white;
+            margin-top: 5px;
+            font-weight: 300;
+            font-size: 15px;
+            display: block;
+        }
+        .sub-footer{
+            background-color: orange;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid orange;
+        }
+        .sub-footer i{
+            padding: 10px;
+            padding-bottom: 20px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .fcardleft{
+            text-align: center;
+            width: 20%;
+            padding: 20px;
+        }
+        .fcardleft-btn{
+            background-color: orange;
+            border: 1px solid white;
+            border-radius: 1px;
+            padding: 4px 18px;
+            color: white;
+            font-size: 26px;
+            display: block;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            transition-duration: 100ms;
+
+        }
+        .fcardleft-btn:hover{
+            background-color: white;
+            color: orange;
+        }
+        .fcard hr{
+            border: none;
+            border-bottom: 2px solid white;
         }
     </style>
 </head>
@@ -140,6 +238,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
                             t. Quam mollitia illo quas nulla, quidem odio explicabo
                              quod, .</p>
+                             <hr>
                     </div>
                     <div class="card">
                         <i class="fa-solid fa-bolt-lightning fa-beat-fade fa-4x"></i> 
@@ -147,6 +246,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
                             t. Quam mollitia illo quas nulla, quidem odio explicabo
                              quod,.</p>
+                             <hr>
                     </div>
                     <div class="card">
                         <i class="fa-solid fa-tower-cell fa-beat-fade fa-4x"></i>
@@ -154,6 +254,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
                             t. Quam mollitia illo quas nulla, quidem odio explicabo
                              quod,</p>
+                             <hr>
                     </div>
                 </div>
             </section>
@@ -163,7 +264,42 @@
    </main>
 
     <footer>
+        <div class="fcard-container">
+            <div class="fcardleft">
+                <i class="fa-solid fa-shield-halved fa-7x" style="color: white;"></i>
+                <button class="fcardleft-btn">Fire!</button>
+                
+            </div>
+            <div class="fcard">
+                <button class="f-btn">TAKE ACTION</button>
+                <hr>
+                <button class="f-subbtn">Hire Assasins</button>
+                <button class="f-subbtn">Launder Your Money</button>
+                <button class="f-subbtn">Trojan Attack</button>
+                <button class="f-subbtn">Shop Weapons</button>
+            </div>
+            <div class="fcard">
+                <button class="f-btn">LEARN</button>
+                <hr>
+                <button class="f-subbtn">Partners</button>
+                <button class="f-subbtn">News</button>
+                <button class="f-subbtn">History</button>
+                <button class="f-subbtn">About Us</button>
+                <button class="f-subbtn">Future</button>
+            </div>
+            <div class="fcard">
+                <button class="f-btn">CONNECT</button>
+                <hr>
+                <button class="f-subbtn">Contact Us</button>
 
+            </div>
+        </div>
     </footer>
+    <div class="sub-footer">
+        <i class="fa-brands fa-instagram fa-2x" style="color: white;"></i>
+        <i class="fa-brands fa-facebook fa-2x" style="color: white;"></i>
+        <i class="fa-brands fa-x-twitter fa-2x" style="color: white;"></i>
+        <i class="fa-brands fa-linkedin fa-2x" style="color: white;"></i>
+        </div>
 </body>
 </html>
