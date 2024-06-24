@@ -62,7 +62,7 @@
         color: white;
         font-size: 20px;
         border: none;
-        padding: 10px 25px;
+        padding: 10px 30px;
         border-radius: 30px;
         margin: 10px;
       }
@@ -265,7 +265,7 @@
       }
       .s-btn {
         color: orange;
-        margin: auto;
+        /* margin: auto; */
       }
       .s-btn:hover{
         color: white;
@@ -285,22 +285,24 @@
         align-items: center;
         grid-template-columns: 1fr 2fr;
       }
+      .header-content i{
+        --fa-beat-opacity: 1;
+        --fa-beat-scale: 0.95;
+        --fa-animation-duration: 3s;
+      }
     </style>
   </head>
   <body>
     <header>
       <div class="header-content">
-        <i
-          class="fa-solid fa-shield-halved fa-7x"
-          style="color: var(--font-footer)"
-        ></i>
+        <i class="fa-solid fa-shield-halved fa-beat fa-7x" style="color: var(--font-footer);"></i>
         <h1 class="h-title">Welcome To The Website</h1>
         <p class="h-subtitle">
           Lorem ipsum dolor sit amet consectetur adipis icing elit. Velit
           doloremque ratione est quas
         </p>
         <button class="btn btn-main">Explore</button>
-        <button class="btn btn-outline">Shop</button>
+        <button class="btn btn-outline">Shop Now</button>
       </div>
     </header>
 
