@@ -1,305 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
-        :root{
-            --theme-color : orange;
-        }
-        *{
-            font-family: Roboto;
-        }
-        h1,h2,h3,h4,h5,h5{
-            margin: 0;
-        }
+      :root {
+        --theme-color: orange;
+        --font-footer: white;
+      }
+      * {
+        font-family: Roboto;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h5 {
+        margin: 0;
+      }
 
-        /*---------------------------HEADER------------------------------*/
+      /*---------------------------HEADER------------------------------*/
 
-        header{
-            height: 70vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-position: bottom;
-            background-image: url(https://cdn.pixabay.com/photo/2024/03/26/12/11/spring-8656708_960_720.jpg);
-        }
-        .header-content{
-            color: white;
-            width: 60%;
-        }
-        body{
-            margin: 0;
-        }
-        .h-title{
-            font-size: 50px;
-        }
-        .h-subtitle{
-            font-size: 25px;
-            margin-bottom: 30px;
-        }
-        .btn{
-            color: white;
-            font-size: 20px;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 30px;
-            margin: 10px;
-        }
-        .btn-main{
-            background-color: var(--theme-color);
-            border: 3px solid orange;
-        }
-        .btn-main:hover{
-            background-color: #ffb428;
-            border: 3px solid #ffb428;
+      header {
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-position: bottom;
+        background-image: url(https://cdn.pixabay.com/photo/2024/03/26/12/11/spring-8656708_960_720.jpg);
+      }
+      .header-content {
+        color: white;
+        width: 60%;
+      }
+      body {
+        margin: 0;
+      }
+      .h-title {
+        font-size: 50px;
+        margin-top: 30px;
+      }
+      .h-subtitle {
+        font-size: 25px;
+        margin-bottom: 30px;
+      }
+      .btn {
+        color: white;
+        font-size: 20px;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        margin: 10px;
+      }
+      .btn-main {
+        background-color: var(--theme-color);
+        border: 3px solid orange;
+      }
+      .btn-main:hover {
+        background-color: #ffb428;
+        border: 3px solid #ffb428;
+      }
+      .btn-outline:hover {
+        background-color: orange;
+      }
+      .btn-outline {
+        background-color: transparent;
+        border: 3px solid orange;
+      }
 
-        }
-        .btn-outline:hover{
-            background-color: orange;
-        }
-        .btn-outline{
-            background-color: transparent;
-            border: 3px solid orange;
-        }
+      /*-------------------------------MAIN------------------------------------*/
+      .card {
+        background-color: white;
+        border: 1px solid white;
+        padding: 30px 20px;
+        height: 300px;
+        --fa-beat-fade-opacity: 1;
+        --fa-beat-fade-scale: 1;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        transition-duration: 150ms;
+      }
+      .card * {
+        padding: 10px;
+      }
+      section {
+        padding: 2% 10%;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .card-container {
+        display: flex;
+        padding-left: 40px;
+        padding-right: 40px;
+        gap: 50px;
+        flex-direction: row;
+        text-align: center;
+        /*in display flex flex direction is by default set to row you dont need to right this*/
+      }
+      .card:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
+        --fa-beat-fade-opacity: 1;
+        --fa-beat-fade-scale: 1.065;
+      }
+      .card:hover hr {
+        border-bottom: 4px solid orange;
+      }
+      .card hr {
+        transition-duration: 200ms;
+      }
+      .section-title {
+        font-size: 40px;
+        color: orange;
+      }
+      .section-subtitle {
+        margin-top: 10px;
+        margin-bottom: 60px;
+        font-size: 25px;
+      }
+      i {
+        color: orange;
+      }
+      .card p {
+        font-size: 20px;
+      }
+      .card hr {
+        border: none;
+        border-bottom: 4px solid white;
+        width: 40%;
+      }
+      /*---------------------------------FOOTER------------------------------*/
 
-        /*-------------------------------MAIN------------------------------------*/
-        .card{
-            background-color: white;
-            border: 1px solid white;
-            padding: 30px 20px;
-            height: 300px;
-            --fa-beat-fade-opacity: 1;
-            --fa-beat-fade-scale: 1;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-            transition-duration: 150ms;
-
-        }
-        .card *{
-            padding: 10px;
-        }
-        section{
-            padding: 2% 10%;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .card-container{
-            display: flex;
-            gap: 50px;
-            flex-direction: row;
-            text-align: center;
-            /*in display flex flex direction is by default set to row you dont need to right this*/
-        }
-        .card:hover{
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
-            --fa-beat-fade-opacity: 1;
-            --fa-beat-fade-scale: 1.065;
-        }
-        .card:hover hr{
-            border-bottom: 4px solid orange;
-        }
-        .card hr{
-            transition-duration: 200ms;
-        }
-        .section-title{
-            font-size: 40px;
-            color: orange;
-        }
-        .section-subtitle{
-            margin-top: 10px;
-            margin-bottom: 60px;
-            font-size: 25px;
-        }
-        i{
-            color: orange;
-        }
-        .card p{
-            font-size: 20px;
-        }
-        .card hr{
-            border: none;
-            border-bottom: 4px solid white;
-            width: 40%;
-        }
-        /*---------------------------------FOOTER------------------------------*/
-
-        footer{
-            height: 27vh;
-            margin-top: 40px;
-            background-color: orange;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 25px;
-            padding-top: 50px;
-        }
-        .fcard-container{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-        }
-        .fcard{
-            text-align: left;
-            padding: 20px;
-            width: 20%;
-        }
-        .f-btn{
-            background-color: orange;
-            border: none;
-            color: white;
-            font-weight: 500;
-            font-size: 18px;
-        }
-        .f-subbtn{
-            background-color: orange;
-            border: none;
-            color: white;
-            margin-top: 5px;
-            font-weight: 300;
-            font-size: 15px;
-            display: block;
-        }
-        .sub-footer{
-            background-color: orange;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid orange;
-        }
-        .sub-footer i{
-            padding: 10px;
-            padding-bottom: 20px;
-            padding-left: 25px;
-            padding-right: 25px;
-        }
-        .fcardleft{
-            text-align: center;
-            width: 20%;
-            padding: 20px;
-        }
-        .fcardleft-btn{
-            background-color: orange;
-            border: 1px solid white;
-            border-radius: 1px;
-            padding: 4px 18px;
-            color: white;
-            font-size: 26px;
-            display: block;
-            margin-top: 25px;
-            margin-left: auto;
-            margin-right: auto;
-            transition-duration: 100ms;
-
-        }
-        .fcardleft-btn:hover{
-            background-color: white;
-            color: orange;
-        }
-        .fcard hr{
-            border: none;
-            border-bottom: 2px solid white;
-        }
+      footer {
+        height: 27vh;
+        margin-top: 40px;
+        background-color: orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        padding-top: 50px;
+      }
+      .fcard-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+      .fcard {
+        text-align: left;
+        padding: 20px;
+        width: 20%;
+      }
+      .f-btn {
+        background-color: orange;
+        border: none;
+        color: var(--font-footer);
+        font-weight: 550;
+        font-size: 20px;
+        transition-duration: 100ms;
+      }
+      .f-subbtn {
+        background-color: orange;
+        border: none;
+        color: var(--font-footer);
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 15px;
+        display: block;
+        transition-duration: 200ms;
+      }
+      .f-subbtn:hover {
+        font-size: 16px;
+      }
+      .f-btn:hover {
+        color: rgb(228, 225, 225);
+      }
+      .sub-footer {
+        background-color: orange;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 10px;
+        border: 2px solid orange;
+      }
+      .sub-footer i {
+        padding: 10px;
+        padding-bottom: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .fcardleft {
+        text-align: center;
+        width: 20%;
+        padding: 20px;
+      }
+      .fcardleft-btn {
+        background-color: orange;
+        border: 1px solid var(--font-footer);
+        border-radius: 1px;
+        padding: 4px 18px;
+        color: var(--font-footer);
+        font-size: 26px;
+        display: block;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        transition-duration: 100ms;
+      }
+      .fcardleft-btn:hover {
+        background-color: var(--font-footer);
+        color: orange;
+      }
+      .fcard hr {
+        border: none;
+        border-bottom: 2px solid var(--font-footer);
+      }
+      .services {
+        margin-top: 60px;
+        /* border: 2px solid orange; */
+        border-radius: 50px;
+        background-color: white;
+        padding: 0;
+        height: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+      }
+      .s-image {
+        /* border: 2px solid purple; */
+        border-radius: 30px;
+      }
+      .s-content {
+        /* border: 2px solid blueviolet; */
+        padding: 20px;
+        text-align: left;
+      }
+      .s-content h2 {
+        font-size: 40px;
+      }
+      .s-content p {
+        font-size: 25px;
+      }
+      .service-btn {
+        font-size: 30px;
+      }
+      .s-image img {
+        border-radius: 30px;
+      }
+      .s-btn {
+        color: orange;
+        margin: auto;
+      }
+      .s-btn:hover{
+        color: white;
+      }
+      .s1 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr;
+      }
+      .s2 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 2fr 1fr;
+      }
+      .s3 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-
-        <div class="header-content">
-            <h1 class="h-title">Welcome To The Website</h1>
-            <p class="h-subtitle">Lorem ipsum dolor sit amet consectetur adipis
-                icing elit. Velit doloremque ratione est quas
-                 fugit tempore illum in officia aliquid soluta?</p>
-             <button class="btn btn-main">Get Started</button>
-             <button class="btn btn-outline">Explore</button>
-        </div>
-
+      <div class="header-content">
+        <i
+          class="fa-solid fa-shield-halved fa-7x"
+          style="color: var(--font-footer)"
+        ></i>
+        <h1 class="h-title">Welcome To The Website</h1>
+        <p class="h-subtitle">
+          Lorem ipsum dolor sit amet consectetur adipis icing elit. Velit
+          doloremque ratione est quas
+        </p>
+        <button class="btn btn-main">Explore</button>
+        <button class="btn btn-outline">Shop</button>
+      </div>
     </header>
 
-   <main>
-
+    <main>
       <article>
-
-             <section class="section-features">
-                <h2 class="section-title">Various Features</h2>
-                <p class="section-subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing eli
-                    t. Tempore magni quo soluta, nobis sed quae velit ipsum
-                     sunt impedit a.</p>
-                <div class="card-container">
-                    <div class="card">
-                        <i class="fa-solid fa-rocket fa-beat-fade fa-4x"></i>     
-                        <h2>RELIABILITY</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
-                            t. Quam mollitia illo quas nulla, quidem odio explicabo
-                             quod, .</p>
-                             <hr>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-bolt-lightning fa-beat-fade fa-4x"></i> 
-                        <h2>SPEED</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
-                            t. Quam mollitia illo quas nulla, quidem odio explicabo
-                             quod,.</p>
-                             <hr>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-tower-cell fa-beat-fade fa-4x"></i>
-                        <h2>TOPOLOGY</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing eli
-                            t. Quam mollitia illo quas nulla, quidem odio explicabo
-                             quod,</p>
-                             <hr>
-                    </div>
-                </div>
-            </section>
-
-     </article>
-
-   </main>
+        <section class="section-features">
+          <h2 class="section-title">Various Features</h2>
+          <p class="section-subtitle">
+            Lorem ipsum dolor, sit amet consectetur adipisicing eli t. Tempore
+          </p>
+          <div class="card-container">
+            <div class="card">
+              <i class="fa-solid fa-rocket fa-beat-fade fa-4x"></i>
+              <h2>RELIABILITY</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                mollitia illo quas nulla, quidem odio explicabo quod, .
+              </p>
+              <hr />
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-bolt-lightning fa-beat-fade fa-4x"></i>
+              <h2>SPEED</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                mollitia illo quas nulla, quidem odio explicabo quod,.
+              </p>
+              <hr />
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-tower-cell fa-beat-fade fa-4x"></i>
+              <h2>TOPOLOGY</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                mollitia illo quas nulla, quidem odio explicabo quod,
+              </p>
+              <hr />
+            </div>
+          </div>
+        </section>
+        <section class="section-services">
+          <div class="services s1">
+            <div class="s-image">
+              <img src="fastttt.png" width="100%" alt="" />
+            </div>
+            <div class="s-content">
+              <h2>Reliability</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur a dipisicing elit.
+                Voluptas dolor itaque v eniam modi quaerat numquam accusantium c
+                upiditate? Facere, maiores perspiciatis!
+              </p>
+              <button class="s-btn btn btn-outline">Learn More</button>
+            </div>
+          </div>
+          <div class="services s2">
+            <div class="s-content">
+              <h2>Speed</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur a dipisicing elit.
+                Voluptas dolor itaque v eniam modi quaerat numquam accusantium c
+                upiditate? Facere, maiores perspiciatis!
+            </p>
+            <button class="s-btn btn btn-outline">Learn More</button>
+            </div>
+            <div class="s-image">
+              <img src="aeroplane.png" width="100%" alt="" />
+            </div>
+          </div>
+          <div class="services s3">
+            <div class="s-image">
+              <img src="map.png" width="100%" alt="" />
+            </div>
+            <div class="s-content">
+              <h2>Accuracy</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur a dipisicing elit.
+                Voluptas dolor itaque v eniam modi quaerat numquam accusantium c
+                upiditate? Facere, maiores perspiciatis!
+              </p>
+              <button class="s-btn btn btn-outline">Learn More</button>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
 
     <footer>
-        <div class="fcard-container">
-            <div class="fcardleft">
-                <i class="fa-solid fa-shield-halved fa-7x" style="color: white;"></i>
-                <button class="fcardleft-btn">Fire!</button>
-                
-            </div>
-            <div class="fcard">
-                <button class="f-btn">TAKE ACTION</button>
-                <hr>
-                <button class="f-subbtn">Hire Assasins</button>
-                <button class="f-subbtn">Launder Your Money</button>
-                <button class="f-subbtn">Trojan Attack</button>
-                <button class="f-subbtn">Shop Weapons</button>
-            </div>
-            <div class="fcard">
-                <button class="f-btn">LEARN</button>
-                <hr>
-                <button class="f-subbtn">Partners</button>
-                <button class="f-subbtn">News</button>
-                <button class="f-subbtn">History</button>
-                <button class="f-subbtn">About Us</button>
-                <button class="f-subbtn">Future</button>
-            </div>
-            <div class="fcard">
-                <button class="f-btn">CONNECT</button>
-                <hr>
-                <button class="f-subbtn">Contact Us</button>
-
-            </div>
+      <div class="fcard-container">
+        <div class="fcardleft">
+          <i
+            class="fa-solid fa-shield-halved fa-7x"
+            style="color: var(--font-footer)"
+          ></i>
+          <button class="fcardleft-btn">Fire!</button>
         </div>
+        <div class="fcard">
+          <button class="f-btn">TAKE ACTION</button>
+          <hr />
+          <button class="f-subbtn">Hire Assasins</button>
+          <button class="f-subbtn">Launder Your Money</button>
+          <button class="f-subbtn">Trojan Attack</button>
+          <button class="f-subbtn">Shop Weapons</button>
+        </div>
+        <div class="fcard">
+          <button class="f-btn">LEARN</button>
+          <hr />
+          <button class="f-subbtn">Partners</button>
+          <button class="f-subbtn">News</button>
+          <button class="f-subbtn">History</button>
+          <button class="f-subbtn">About Us</button>
+          <button class="f-subbtn">Future</button>
+        </div>
+        <div class="fcard">
+          <button class="f-btn">CONNECT</button>
+          <hr />
+          <button class="f-subbtn">Contact Us</button>
+        </div>
+      </div>
     </footer>
     <div class="sub-footer">
-        <i class="fa-brands fa-instagram fa-2x" style="color: white;"></i>
-        <i class="fa-brands fa-facebook fa-2x" style="color: white;"></i>
-        <i class="fa-brands fa-x-twitter fa-2x" style="color: white;"></i>
-        <i class="fa-brands fa-linkedin fa-2x" style="color: white;"></i>
-        </div>
-</body>
+      <i
+        class="fa-brands fa-instagram fa-2x"
+        style="color: var(--font-footer)"
+      ></i>
+      <i
+        class="fa-brands fa-facebook fa-2x"
+        style="color: var(--font-footer)"
+      ></i>
+      <i
+        class="fa-brands fa-x-twitter fa-2x"
+        style="color: var(--font-footer)"
+      ></i>
+      <i
+        class="fa-brands fa-linkedin fa-2x"
+        style="color: var(--font-footer)"
+      ></i>
+    </div>
+  </body>
 </html>
