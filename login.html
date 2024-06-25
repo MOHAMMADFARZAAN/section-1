@@ -6,7 +6,8 @@
     <title>Login Page</title>
     <style>
         :root{
-            --theme-color: #0077B5;
+            --theme-color: #0077B5
+            ;
         }
         *{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -59,12 +60,18 @@
         .signin{
             width: 100%;
             height: 50px;
-            border: 0px solid;
+            border: 3px solid var(--theme-color);
             border-radius: 30px;
             font-size: 19px;
             color: white;
             font-weight: 500;
             background-color: var(--theme-color);
+            transition-duration: 200ms;
+        }
+        .signin:hover{
+            background-color: white;
+            border: 3px solid var(--theme-color);
+            color: var(--theme-color);
         }
         p{
             text-align: left;
@@ -76,10 +83,10 @@
         .join{
             width: 100%;
             height: 50px;
-            border: 2px solid black;
+            border: 3px solid var(--theme-color);
             border-radius: 30px;
             font-size: 19px;
-            color: black;
+            color: var(--theme-color);
             font-weight: 500;
             background-color: white;
             
