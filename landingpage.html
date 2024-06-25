@@ -49,6 +49,8 @@
       }
       body {
         margin: 0;
+        background: rgb(255,228,196);
+background: linear-gradient(0deg, rgba(255,228,196,1) 4%, rgba(255,255,255,1) 80%);
       }
       .h-title {
         font-size: 50px;
@@ -114,7 +116,7 @@
         height: 300px;
         --fa-beat-fade-opacity: 1;
         --fa-beat-fade-scale: 1;
-        border-radius: 10px;
+        border-radius: 30px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
         transition-duration: 150ms;
@@ -139,7 +141,7 @@
       .card:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
         --fa-beat-fade-opacity: 1;
-        --fa-beat-fade-scale: 1.065;
+        --fa-beat-fade-scale: 1.075;
       }
       .card:hover hr {
         border-bottom: 4px solid orange;
@@ -195,9 +197,12 @@
 
       footer {
         height: 27vh;
-        margin-top: 40px;
+        margin-top: 80px;
         background-color: orange;
         display: flex;
+        border-top: 30px solid white;
+        border-top-left-radius: 40%;
+        border-top-right-radius: 20%;
         align-items: center;
         justify-content: center;
         padding: 25px;
@@ -322,16 +327,21 @@
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 2fr;
+        border-left: 2px solid orange;
       }
       .s2 {
         display: grid;
         align-items: center;
         grid-template-columns: 2fr 1fr;
+        border-right: 2px solid orange;
+
       }
       .s3 {
         display: grid;
         align-items: center;
         grid-template-columns: 1fr 2fr;
+        border-left: 2px solid orange;
+
       }
       .header-content i{
         --fa-beat-opacity: 1;
@@ -364,7 +374,7 @@
     <header>
       <div class="header-content">
         <i class="fa-solid fa-shield-halved fa-beat fa-7x" style="color: var(--font-footer);"></i>
-        <h1 class="h-title">Welcome To The Website</h1>
+        <h1 class="h-title">The SHIELD!™</h1>
         <p class="h-subtitle">
           Lorem ipsum dolor sit amet consectetur adipis icing elit. Velit
           doloremque ratione est quas
@@ -455,6 +465,39 @@
             </div>
           </div>
         </section>
+        <section>
+            <h2 class="section-title" style="color: black;">Our Plans</h2>
+            <p class="section-subtitle">Lorem ipsum dolor, sit amet consectetur</p>
+            <div class="card-container">
+                <div class="cb1 cbottom card">
+                  <i class="fa-solid fa-rocket fa-beat-fade fa-4x"></i>
+                  <h2>RELIABILITY</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                    mollitia illo quas nulla, quidem odio explicabo quod, .
+                  </p>
+                  <hr />
+                </div>
+                <div class="cb2 cbottom card">
+                  <i class="fa-solid fa-bolt-lightning fa-beat-fade fa-4x"></i>
+                  <h2>SPEED</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                    mollitia illo quas nulla, quidem odio explicabo quod,.
+                  </p>
+                  <hr />
+                </div>
+                <div class="cb3 cbottom card">
+                  <i class="fa-solid fa-tower-cell fa-beat-fade fa-4x"></i>
+                  <h2>TOPOLOGY</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing eli t. Quam
+                    mollitia illo quas nulla, quidem odio explicabo quod,
+                  </p>
+                  <hr />
+                </div>
+              </div>
+        </section>
       </article>
     </main>
 
@@ -508,6 +551,8 @@
         class="fa-brands fa-linkedin fa-2x"
         style="color: var(--font-footer)"
       ></i>
+      <br>
+      <p style="color: white;">DISCLAIMER: The Contents Written on this Website are Not True. This is Written Just For FUN so LOOK, LAUGH and please ENJOY</p>
     </div>
   </body>
 </html>
