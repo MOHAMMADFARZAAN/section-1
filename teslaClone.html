@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  /* body{
+    background-image: url(cyberrrrr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  } */
+  .roadsterr{
+    background-image: url(roadsterrr.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  .cyberr{
+    background-image: url(cyberbackorig.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  nav{
+    background: transparent;
+    position: absolute;
+  }
+  .btn{
+    transition-duration: 100ms;
+    background-color: #111111;
+  }
+  .btn1{
+    border-top: 2px solid rgb(226, 219, 219);
+  }
+  .btn:hover{
+    background-color: #111111e6;
+  }
+
+  .message {
+        background: black;
+        z-index: 1;
+        color: #fff;
+        position: absolute;
+        top: -250px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        padding: 20px;
+        transition: 400ms ease-in-out;
+        overflow: hidden;
+        border: 2px solid red;
+        box-sizing: border-box;
+      }
+      .slidedown:hover ~ .message {
+        top: 0;
+      }
+      .slidedown {
+        cursor: pointer;
+        border: 3px solid red;
+      }
+</style>
+<body>
+  <div class="message">
+    <h1>hello, I'm a hidden message. You found it.</h1>
+  </div>
+  <nav class="grid grid-cols-12">
+          <div class="logo col-span-3 h-14">
+            <button class="mt-5 ml-10">
+              <img class="w-28" src="tesla-logo-png-2244.png" alt="">
+            </button>
+          </div>
+          <div class="buttonss text-center col-span-6 ml-10 h-14">
+
+            <button class="slidedown px-4 py-1 mt-3 text-sm font-semibold rounded-md hover:bg-black hover:bg-opacity-10">Vehicles</button>
+            <button class="slidedown px-4 py-1 mt-2 text-sm font-semibold rounded-md hover:bg-black hover:bg-opacity-10">Energy</button>
+            <button class="slidedown px-4 py-1 mt-2 text-sm font-semibold rounded-md hover:bg-black hover:bg-opacity-10">Charging</button>
+            <button class="slidedown px-4 py-1 mt-2 text-sm font-semibold rounded-md hover:bg-black hover:bg-opacity-10">Discover</button>
+            <button class="slidedown px-4 py-1 mt-2 text-sm font-semibold rounded-md hover:bg-black hover:bg-opacity-10">Shop</button>
+
+          </div>
+          <div class="sidebuttons flex col-span-3 h-14">
+            <div class="flex ml-[270px]">
+            <button>
+                <img class="w-6 h-6 my-3 mx-1" src="question.png" alt="">
+            </button>
+            <button>
+                <img class="w-6 h-6 my-3 mx-2" src="user.png" alt="">
+            </button>
+            <button>
+                <img class="w-6 h-6 my-3 mx-1" src="internet.png" alt="">
+            </button>
+
+          </div>
+          </div>
+  </nav>
+
+
+  <section class="cyberr flex h-[100vh] justify-center">
+      <section class="flex mt-10 flex-col block text-center">
+        <img class="mt-[-80px] w-[680px]" src="Tesla_Cybertruck-Logo.wine.svg" alt="">
+        <br>
+        <div class="mt-[180px]">
+        <button class="btn btn1 px-20 py-3 mx-2 rounded-sm text-white font-semibold">Order Now</button>
+        <button class="btn px-20 py-3 mx-3 rounded-sm font-semibold text-white">Learn More</button>
+        </div>
+      </section>
+  </section>
+  <section class="roadsterr flex flex-col items-center">
+  <div class="mt-24 p-0">
+    <h1 class="text-5xl font-semibold text-center">Roadster</h1>
+    <h1 class="text-center font-semibold mt-2 text-2xl">From $163,990</h1>
+    <h1 class="text-center font-semibold text-2xl">Unleash The Supercharged Electric Luxury</h1>
+  </div>
+  <div class="mt-[430px]">
+    <button class="px-20 py-3 mx-2 rounded-sm text-black bg-white font-semibold">Order Now</button>
+    <button class="px-20 py-3 mx-3 rounded-sm font-semibold bg-black hover:bg-opacity-80 text-white">Learn More</button>
+    </div>
+  </section>
+
+
+
+  <footer>
+
+  </footer>
+  </h1>
+</body>
+</html>

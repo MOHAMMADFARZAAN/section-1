@@ -93,6 +93,22 @@ const smartphoneArray = [
         ram: ['6GB', '8GB']
 
     },
+    {
+        brand: 'Apple',
+        model: 'iphone 15 Pro',
+        price: 'mummy ki ek sone ki chain',
+        colors: ['white', 'purple', 'titanium'],
+        ram: ['6GB', '8GB']
+
+    },
+    {
+        brand: 'Apple',
+        model: 'iphone 15',
+        price: 'mummy ki ek sone ki chain',
+        colors: ['yellow', 'blue', 'titanium'],
+        ram: ['6GB', '8GB']
+
+    },
 
     {
         brand: 'MI',
@@ -109,6 +125,15 @@ const smartphoneArray = [
         model: 'S24 Ultra',
         price: '$1100000',
         colors: ['white', 'gold', 'silver'],
+        ram: ['8GB', '16GB']
+
+    
+    },
+    {
+        brand: 'Samsung',
+        model: 'S24',
+        price: '$1100000',
+        colors: ['white', 'midnight black', 'halo'],
         ram: ['8GB', '16GB']
 
     
@@ -164,13 +189,61 @@ console.log('------------------------------------------');
 console.log(smartphoneArray.filter( ( a ) => {return a.colors.includes('chill green')}))
 
 
+// --------------5th July-------------------------------------
+
+console.log('//////////////////////////////////////////////////////////////////////')
+
+
+// Question: filter all apple smart phones 
+
+const keyword = 'apple';
+
+const Appleonly = (smartphoneArray.filter( (a) => {return a.brand.toLowerCase() === keyword.toLowerCase()}));
+const Appleonly2 = (smartphoneArray.filter( (a) => {return a.brand.toLowerCase().includes(keyword.toLowerCase())}));
+console.log(Appleonly2);
+
+
+// print all brands
+
+const brandss = smartphoneArray.map((phone) => {return phone.brand});
+console.log(new Set(brandss));        
+
+// to remove all the duplicate items  it is now a set map and filter will not work
+
+
+// to convert set back to array
+
+console.log( Array.from(new Set(brandss)));
+console.log( Array.from('APPLEJSLDFHSL'));
+
+
+// To display in orderly array
+
+let [brand, model, price] = ['Apple', 'Iphone 15', 23223]
+console.log(brand + ' ' + model + ' - ' + price);
+console.log(`${brand} ${model} - ${price}`);
+
+
+console.log(smartphoneArray.map((p,q) => {return `${q+1}. ${p.brand} ${p.model} - ${price} `}));
 
 
 
 
+// ------------------------------------------
+
+
+console.log('////////////////////////////////////////////////////////////')
+
+ const allcolors = smartphoneArray.map((p,q) => {return p.colors.map((c) => {return `${p.brand} ${p.model}   -   ${c}`})})
+    
+console.log(allcolors.flat());
 
 
 
+// ------------add ram -----------
+
+// const allcolorsram = smartphoneArray.map((p,q) => {return p.colors.map((c) => {return c.map)})
+// console.log(allcolorsram.flat());
 
 
 
